@@ -1,0 +1,20 @@
+/*
+ *		colors.css
+ *		2020-11-16 usp
+ */
+
+.rule { border-color: #6060A0 ; }
+#page-header { background-color : #204080; }
+#navigation-panel a:visited { color : purple ; }
+#navigation-panel a { color: inherit ; }
+body {/* color : #333 ; */}
+cc { color : #392 ; }
+figcaption+iframe { background-color : white ; }
+figcaption+pre { background-color : #FFFFFF ; }
+h1.page-title { color : #6060A0 ; }
+h1, h2, h3, h4, h5, h6 { color : #6060A0 ; }
+hi { color: #E77F00 ; }
+pre { color : #303080 ; background-color : transparent ; }
+tt { color : #8080D0 ; }
+table.sticky-headers th { background-color : #EEE }
+table.sticky-headers thead:not(:first-child) tr * { background-color : #CCC }

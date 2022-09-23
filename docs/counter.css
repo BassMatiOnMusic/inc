@@ -1,0 +1,14 @@
+﻿/* counter.css  2022-07-20  usp */
+
+body { counter-reset : listing-counter figure-counter table-counter caption-counter example-counter definition-counter }
+figcaption.listing:before { counter-increment : listing-counter; content : "Listing " counter(listing-counter) ": " ; }
+figcaption.figure:before { counter-increment : figure-counter; content : "Figure " counter(figure-counter) ": " ; }
+figcaption.syntax:before { counter-increment : syntax-counter; content : "Syntax " counter(listing-counter) ": " ; }
+figcaption.table:before { counter-increment : table-counter; content : "Table " counter(table-counter) ": " ; }
+figcaption.example:before { counter-increment : example-counter; content : "Example " counter(example-counter) ": " ; }
+table > caption.autonum:before { counter-increment : caption-counter ; content : "Table " counter(caption-counter) ": " ; }
+div.definition figcaption:before { counter-increment : definition-counter; content : "Definition " counter(definition-counter) ; }
+
+ol.instructions, ol.instructions ol { list-style-type : none ; counter-reset : instruction-counter }
+ol.continue { counter-reset : none }
+ol.instructions>li:before, ol.instructions ol>li:before{  counter-increment : instruction-counter; content : counters(instruction-counter, ".")  ". " ; }

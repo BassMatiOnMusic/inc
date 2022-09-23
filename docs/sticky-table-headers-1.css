@@ -1,0 +1,34 @@
+/*
+ *		sticky-table-headers-1.css   2022-01-25   USP
+ */
+
+ table.sticky-headers :first-child :first-child * {
+	/* Column header cells: Table cells in the first THEAD row */
+	position : sticky ;
+	top : 0px ;
+	border-top-style : none ;
+	}
+table.sticky-headers tr :first-child {
+	/* Row header cells: First table cells in a row */
+	border-left-style : none ;
+	position : sticky ;
+	left : 0px ;
+	}
+table.sticky-headers :first-child :first-child :first-child {
+	/* Cell in the top left corner */
+	z-index : 1 ;
+	}
+table.sticky-headers thead:not(:first-child) * {
+	/* Row-group header rows */
+	position : sticky ;
+	top : 27px ;  /* This must be adjusted to the proper line height */
+	z-index : 1 ;
+	border-top-style : solid ;
+	}
+table.sticky-headers thead:not(:first-child) th {
+	/* Leftmost cell in a row-group header */
+	z-index : 2 ;
+	overflow-x : visible ;
+	max-width : 60px ;
+	border-right-style : none ;
+	}

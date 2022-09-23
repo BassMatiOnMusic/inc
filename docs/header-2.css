@@ -1,0 +1,9 @@
+﻿/* headers-2.css  2022-01-23  usp */
+
+#page-header {
+	height : 65px ;
+	background-image : url( /logo.svg ) ;
+	background-position: 10px 5px ;
+	background-repeat : no-repeat ;
+	}
+

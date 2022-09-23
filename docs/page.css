@@ -1,0 +1,315 @@
+/*
+ *	page.css
+ *	2022-06-21 usp
+ */
+
+@import url( header-2.css );
+@import url( footer-2.css );
+@import url( toolbar/toolbar-2.css );
+@import url( collapsible/collapsible-5.css );
+@import url( navigation/navigation-3.css );
+@import url( navigation/path-bar-1.css );
+@import url( counter.css );
+@import url( colors.css );
+@import url( colors.css );
+
+@font-face { 
+	font-family: "arial narrow"; 
+	font-style: normal; 
+	font-weight: 400;
+	src: 	local("Arial Narrow"), 
+		local("ArialNarrow-Regular"), 
+		url(fnt/arial-narrow.woff) format("woff"), 
+		url(fnt/arial-narrow.ttf) format("truetype");
+	}
+@font-face { 
+	font-family: "droid sans mono"; 
+	font-style: normal; 
+	font-weight: 400;
+	src: 	local("droid sans mono"), 
+		url(fnt/DroidSansMono.ttf) format("truetype");
+	}
+
+@media print {
+	#main-toolbar , .path-bar , #navigation-panel  { display : none !important ; }
+	table { page-break-inside : avoid }
+	}
+
+.border-top {
+	border-style: none;
+	border-top : 1px solid silver;
+	}
+
+.box {
+	border : 1px solid silver ;
+	}
+
+.hscroll {
+	overflow-x : auto;
+	}
+.imgbox {
+	border : 1px solid silver;
+	width : auto;
+	overflow : auto ;
+	}
+
+.indent {
+	margin-left : 20px ;
+	}
+
+.mono {
+	font-family: "Courier New", Courier, monospace ;
+	font-size: 80% ;
+	}
+	
+.no-borders {
+	border-style : none ;
+	}
+
+.no-bullets {
+	list-style-type : none ;
+	padding-left : 0 ;
+	}
+
+.note {
+	border-left: 5px dotted orange ;
+	margin-left: 20px;
+	padding-left: 10px ;
+	margin-right: 40px ;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-family: "Arial Narrow";
+	}
+
+.spaced-items li { 
+	margin-top: 20px;
+	margin-bottom: 20px; 
+	}
+
+.unspaced-items li{
+	margin-top: 0 ;
+	margin-bottom: 0 ;
+	}
+
+.spaced-nested ul, 
+.spaced-nested ol {
+	margin-bottom : 20px ;
+	}
+
+.wrap-indent {
+	white-space : normal ;
+	padding-left : 20px ;
+	text-indent : -15px ;
+	}
+
+#content {
+	overflow : visible ;
+	}
+
+#page-content {
+	padding-left : 60px ;
+	padding-right : 20px ;
+	}
+
+body {
+	font-family : "Segoe UI", Calibri, Verdana, Arial, "Palatino Linotype", Hevetica ;
+	margin : 0 ;
+	line-height : 180% ;
+	font-size : 12pt ;
+	padding-bottom : 20px ;
+	}
+	
+caption {
+	margin-bottom: 5px ;
+	}
+
+dd {
+	margin-left: 20px ;
+	}
+
+dl.description-list dd {
+	margin-top : 10px ;
+	margin-bottom : 10px ;
+	}
+
+dl.unspaced-items dd {
+	margin-top : 0px ;
+	margin-bottom : 0px ;
+	}
+	
+dl.syntax { 
+	font-family : Merriweather, "Times New Roman", "Bookman Old Style", Garamond ;
+	font-size : 110% ;
+	}
+
+dl.syntax a { 
+	text-decoration : none ;
+	color : #2896d1 ;
+	}
+
+dl.syntax a:hover {
+	text-decoration : underline ;
+	}
+
+dl.syntax a:visited {
+	color : darkviolet ;
+	}
+
+figcaption {
+	font-family : "Times New Roman";
+	font-style : italic ;
+	color: #A0A0A0 ;
+	margin-left : 0px ;
+	margin-top : 15px ;
+	margin-bottom : 0px;
+	padding-left : 10px ;
+	padding-bottom : 5px ;
+	}
+
+figcaption+pre {
+	margin-top : 0px ;
+	margin-bottom : 40px ;
+	border : 1px solid silver;
+	}
+
+figcaption+iframe {
+	margin-top : 0px ;
+	margin-bottom : 20px ;
+	border-top : 1px solid silver;
+	}
+
+figcaption+img {
+	border-top : 1px solid silver;
+	}
+
+figcaption+dl {
+	margin-top : 0px ;
+	padding-top : 5px ;
+	border-top : 1px solid silver ;
+	}
+
+figure { 
+	margin-left : 10px ;
+	}
+
+h1, h2, h3, h4, h5, h6 { 
+	font-family : "Arial Narrow", "Times New Roman", "Sans-Serif";
+	line-height : 32px; 
+	font-weight : normal ;
+	margin-top : 40px;
+	margin-bottom : 10px;
+	}
+
+h1+h2, h2+h3, h3+h4, h4+h5 {
+	margin-top: 10px;
+	}
+
+h1 { font-size: 1.7em ; }
+h1.page-subtitle { font-size : 1.3em ; }
+h2 {	font-size : 1.5em ; }
+h3 { font-size : 1.3em ; }
+h4 {	font-size : 1.2em ; }
+h5 { 
+	font-size: 1.0em ;
+	font-style : italic ;
+	margin-bottom : 10px ;
+	}
+
+iframe {
+	border : 1px solid #B0B0B0 ;
+	height : 300px ;
+	width : calc( 100% - 10px ) ;
+	}
+
+li p { 
+	margin-top : 0px ;
+	margin-bottom : 0px ;
+	}
+
+li pre {
+	white-space : pre-line ;
+	}
+
+pre { 
+	font-family: "Droid Sans Mono", "Times New Roman", "Palatino Linotype", Serif, Consolas;
+	font-size: 75%;
+	line-height: 160% ;
+	margin-left : 0px ; 
+	padding : 10px 10px 11px 10px ;
+	overflow: auto ;
+	}
+
+pre.tall {
+	display : inline-block;
+	max-width: 95% ;
+	}
+
+table caption { 
+	font-family : "Times New Roman";
+	font-style : italic ;
+	color: #A0A0A0 ;
+	text-align : left ;
+	margin-left : 10px ;
+	}
+
+table.centered tbody td {
+	text-align : center ;
+	}
+
+table.flat-borders {
+	border-spacing : 0px ;
+	}
+
+table.flat-borders tr * {
+	border-width : 1px ;
+	border-color : #BBB ;
+	border-style : none solid solid none ;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+
+table.flat-borders colgroup+tbody :first-child *,
+table.flat-borders colgroup+thead :first-child *,
+table.flat-borders :first-child :first-child *	{
+	border-top-style : solid ;
+	}
+
+table.flat-borders tr :first-child {
+	border-left-style : solid ;
+	}
+	
+table.no-borders tr td, 
+table.no-borders tr th {
+	line-height : 140% ;
+	border-style : none ;
+	padding-left : 10px ;
+	padding-right : 10px ;
+	}
+
+table.matrix {
+	border-left : 1px solid black;
+	border-right : 1px solid black;
+	}
+
+tr.column-headers {
+	font-style : italic ;
+	line-height : 15px ;
+	}
+
+tr.column-headers * {
+	padding-right : 10px ;
+	}
+
+table tbody tr :first-child { text-align : left }
+table.data-centered tbody td { text-align : center }
+table.header-weight-normal th { font-weight : normal }
+table.header-weight-normal thead th { font-style : italic }
+
+tt {
+	font-size: 100% ;
+	font-family: "Palatino Linotype", Consolas, "Lucida Console" ;
+	}
+
+	/* right arrow: &#8407; */
+vector { font-style : italic }
+vector > arrow { vertical-align : 3px }

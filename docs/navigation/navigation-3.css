@@ -1,0 +1,54 @@
+/* navigation-panel-1.css  2021-08-19  usp */
+
+#navigation-panel {
+	overflow : auto ;
+	position : fixed ;
+	top : 0px ;
+	left : 0px ;
+	bottom : 1px ;
+	max-width : 100% ;
+	max-height : 100% ;
+	width : 0px ;
+	background-color : white ;
+	white-space : nowrap ;
+	transition : width 1s linear ;
+	border : 1px solid orange ;
+	z-index : 20 ;
+	}
+
+#navigation-panel a { 
+	color : inherit ;
+	text-decoration : none ;
+	}
+
+#navigation-panel a:hover { 
+	text-decoration : underline ;
+	}
+
+#navigation-panel > div {
+	padding-top : 5px ;
+	padding-left : 10px ;
+	padding-bottom : 5px ;
+	}
+#navigation-panel > ul {
+	padding-left : 40px ;
+	padding-right : 5px ;
+	}
+
+#navigation-panel li:not([cbc]):before {
+    content : "\00A0"  ;  /* non-breaking space gives it a content */
+    display : inline-block ;
+    margin-left : -25px ;
+    width : 25px ;
+    height : auto ;
+	background-size : 1em ;
+    background-repeat : no-repeat ;
+	background-position-x : left ;
+	background-position-y : center ;
+	background-image: url("../collapsible/orange-dot.svg")
+	}
+
+	
+li:not([cbc])[active]:before {
+    background-image : url("../collapsible/orange-dot-active.svg") !important ;
+	}
