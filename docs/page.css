@@ -1,6 +1,6 @@
 /*
  *	page.css
- *	2022-06-21 usp
+ *	2022-09-24 usp
  */
 
 @import url( header-2.css );
@@ -10,8 +10,7 @@
 @import url( navigation/navigation-3.css );
 @import url( navigation/path-bar-1.css );
 @import url( counter.css );
-@import url( colors.css );
-@import url( colors.css );
+@import url( /colors.css );
 
 @font-face { 
 	font-family: "arial narrow"; 
@@ -260,7 +259,7 @@ table.flat-borders {
 	border-spacing : 0px ;
 	}
 
-table.flat-borders tr * {
+table.flat-borders tr>* {
 	border-width : 1px ;
 	border-color : #BBB ;
 	border-style : none solid solid none ;
@@ -274,7 +273,7 @@ table.flat-borders :first-child :first-child *	{
 	border-top-style : solid ;
 	}
 
-table.flat-borders tr :first-child {
+table.flat-borders tr>:first-child {
 	border-left-style : solid ;
 	}
 	

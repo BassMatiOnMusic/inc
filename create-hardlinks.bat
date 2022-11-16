@@ -1,4 +1,15 @@
+
+rem Run this after cloning the repo to a workstation.
+rem Replaces include files from the repo with hard links to local (maintained) source files.
+rem Now changes due do maintenance are automatically replicated to this repository.
+
+rem Step 1: Make local files read-only, then delete the others.
 cd docs
+attrib +r colors.css
+del *.*
+attrib -r colors.css
+
+rem Step 2: Create hard links for directories and files
 
 mklink /j collapsible ..\..\..\bassmati-on-code\inc\docs\collapsible
 mklink /j fnt ..\..\..\bassmati-on-code\inc\docs\fnt
@@ -8,7 +19,6 @@ mklink /j music ..\..\..\bassmati-on-code\inc\docs\music
 mklink /j navigation ..\..\..\bassmati-on-code\inc\docs\navigation
 mklink /j toolbar ..\..\..\bassmati-on-code\inc\docs\toolbar
 
-mklink /h colors.css ..\..\..\bassmati-on-code\inc\docs\colors.css
 mklink /h counter.css ..\..\..\bassmati-on-code\inc\docs\counter.css
 mklink /h footer-2.css ..\..\..\bassmati-on-code\inc\docs\footer-2.css
 mklink /h footer-2.js ..\..\..\bassmati-on-code\inc\docs\footer-2.js
